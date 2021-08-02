@@ -1,0 +1,672 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  background-color: black; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: black;
+  font-size: 1.55rem;
+  min-height: 100vh; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+p {
+  font-size: "Segoe UI"; }
+
+.main-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin: auto;
+  min-height: 100vh; }
+
+main {
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh; }
+
+header {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.nav-container {
+  width: 100%;
+  max-width: 325px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 0px 12px; }
+  .nav-container .logo {
+    height: 70px;
+    font-size: 4rem;
+    padding: 12px; }
+    .nav-container .logo .logo-img {
+      width: 100%;
+      color: #d9d9d9; }
+  .nav-container .nav-links {
+    display: flex;
+    flex-direction: column; }
+  .nav-container .links-wrapper {
+    padding: 10px 0; }
+    .nav-container .links-wrapper .links {
+      display: flex;
+      flex-direction: row;
+      padding: 12px;
+      color: #d9d9d9;
+      transition: 0.2s; }
+    .nav-container .links-wrapper .link-icon {
+      font-size: 24px; }
+    .nav-container .links-wrapper .link {
+      font-weight: 700;
+      max-width: 100%;
+      margin: auto 20px;
+      font-size: 24px; }
+    .nav-container .links-wrapper .links:hover {
+      background-color: #1da1f2;
+      border-radius: 100px; }
+    .nav-container .links-wrapper .active {
+      color: #1da1f2; }
+  .nav-container .nav-btn .nav-tweet {
+    margin: auto;
+    padding: 20px 0;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    width: 90%;
+    background-color: #1da1f2;
+    text-align: center;
+    border: none;
+    border-radius: 999px;
+    margin-top: 1rem; }
+
+.nav-account {
+  width: 100%;
+  max-width: 325px;
+  margin-bottom: 20px; }
+  .nav-account .account-items {
+    display: flex;
+    padding: 12px; }
+  .nav-account .profile-img {
+    width: 40px;
+    height: 40px;
+    border: none; }
+    .nav-account .profile-img img {
+      border-radius: 200px; }
+  .nav-account .account-names {
+    margin: 0 15px; }
+    .nav-account .account-names .account-name {
+      color: #f5f8fa;
+      font-weight: 700; }
+    .nav-account .account-names .account-tag {
+      color: #aab8c2; }
+  .nav-account .account-icon {
+    padding: 0 4px;
+    margin-left: auto;
+    justify-content: center;
+    align-self: center; }
+  .nav-account .account-icon i {
+    font-size: 15px;
+    color: #f5f8fa; }
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 66.6% 45%;
+  max-width: 990px;
+  gap: 3rem; }
+
+.main-center {
+  background-color: black;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  border-top: none;
+  border-bottom: none; }
+  .main-center .main-sticky {
+    width: 100%;
+    padding: 0 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    position: sticky; }
+    .main-center .main-sticky .sticky-text {
+      width: 90%;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #d9d9d9;
+      margin: auto auto;
+      cursor: pointer; }
+    .main-center .main-sticky .sticky-icon {
+      height: auto;
+      color: #1da1f2;
+      font-size: 1.6rem;
+      margin: auto;
+      text-align: end;
+      width: 10%;
+      margin-right: 1rem; }
+  .main-center .tweet-box {
+    display: flex;
+    padding: 4px 1.6rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    padding-top: 20px; }
+    .main-center .tweet-box .tweet-icon {
+      width: 4.8rem;
+      height: 4.8rem;
+      border: none;
+      padding-top: 4px;
+      margin-right: 2rem; }
+    .main-center .tweet-box .tweet-icon img {
+      border-radius: 200px; }
+    .main-center .tweet-box .tweet-items {
+      width: 100%; }
+      .main-center .tweet-box .tweet-items .tweet-msg input {
+        width: 100%;
+        padding: 20px 0;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem; }
+  .main-center .tweet-iconset {
+    display: flex;
+    justify-content: space-between; }
+    .main-center .tweet-iconset .icon-set {
+      height: 5.2rem;
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 2rem; }
+    .main-center .tweet-iconset .icon-set i {
+      color: white;
+      font-size: 2rem;
+      color: #1da1f2; }
+    .main-center .tweet-iconset .main-btn .main-tweet {
+      border: none;
+      background-color: transparent;
+      color: white;
+      font-weight: 700;
+      font-size: 1.7rem;
+      display: flex;
+      padding: 1.5rem 5rem;
+      border-radius: 50px;
+      background-color: #1da1f2; }
+  .main-center .seperator {
+    width: 100%;
+    background-color: #15181c;
+    border: none;
+    height: 1.3rem;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.25); }
+  .main-center .article-wrapper {
+    padding: 0px 1.6rem;
+    width: 100%;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    padding-bottom: 1.5rem;
+    width: 100%; }
+  .main-center .tweet-icon {
+    width: 7rem;
+    border: none;
+    padding-top: 4px;
+    margin-right: 2rem; }
+    .main-center .tweet-icon img {
+      border-radius: 999px; }
+  .main-center .article-profile {
+    display: flex;
+    padding-top: 1rem; }
+  .main-center .article-top-bar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem; }
+    .main-center .article-top-bar .article-icon {
+      display: flex;
+      align-items: center;
+      align-self: flex-end; }
+    .main-center .article-top-bar .profile-name {
+      color: #f5f8fa;
+      font-weight: 700; }
+    .main-center .article-top-bar .profile-tag {
+      color: #aab8c2; }
+  .main-center .time {
+    color: #aab8c2; }
+  .main-center .article-icon {
+    color: #aab8c2; }
+  .main-center .article-tweet {
+    color: #d9d9d9;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem; }
+  .main-center .article-image {
+    max-height: 300px;
+    overflow: hidden;
+    margin-bottom: 3rem; }
+    .main-center .article-image img {
+      border-radius: 20px; }
+  .main-center .article-icons {
+    width: 100%;
+    display: flex;
+    max-width: 80%;
+    justify-content: space-between;
+    margin-top: 12px;
+    color: white;
+    font-size: 1.7rem; }
+    .main-center .article-icons i {
+      color: #aab8c2;
+      margin: auto; }
+    .main-center .article-icons .below-img {
+      display: flex; }
+      .main-center .article-icons .below-img p {
+        padding: 0 1rem; }
+
+.main-right {
+  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 700px; }
+  .main-right .right-wrapper {
+    margin-right: 10px;
+    width: 100%; }
+  .main-right .input-container {
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    margin-bottom: 3rem; }
+    .main-right .input-container .input-icon {
+      height: 4.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding-top: 12px;
+      margin-top: 6px; }
+      .main-right .input-container .input-icon i {
+        position: absolute;
+        left: 25px;
+        font-size: 2rem;
+        color: #3f3e3d; }
+    .main-right .input-container input {
+      height: 5.5rem;
+      padding: 12px 70px;
+      border-radius: 999px;
+      border: none;
+      width: 100%;
+      font-size: 2rem;
+      background-color: #202327;
+      color: #3f3e3d; }
+  .main-right .all-topics {
+    width: 100%;
+    background-color: #202327;
+    border-radius: 12px;
+    border: none; }
+  .main-right .topic-title-wrapper {
+    display: flex;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.25); }
+  .main-right .topic-title h4 {
+    font-size: 2.5rem;
+    color: #d9d9d9; }
+  .main-right .topic-icon i {
+    color: #1da1f2;
+    font-size: 2rem; }
+  .main-right .topics {
+    padding: 12px 16px;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.25); }
+    .main-right .topics .topic-top {
+      display: flex;
+      justify-content: space-between;
+      color: #6e767d;
+      font-size: 1.6rem; }
+    .main-right .topics .topic-tag {
+      margin-top: 4px; }
+    .main-right .topics .topic-tag span {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #d9d9d9; }
+    .main-right .topics .topic-tweet {
+      color: #6e767d;
+      font-size: 1.6rem;
+      margin-top: 4px; }
+  .main-right .topics:hover {
+    background-color: #34383d; }
+
+input[type="text"] {
+  color: #fff;
+  border: none;
+  outline: none; }
+
+#tweetBox {
+  display: none; }
+
+.modal {
+  display: flex;
+  /* Hidden by default */
+  position: absolute;
+  /* Stay in place */
+  z-index: 10;
+  /* Sit on top */
+  left: 45%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  /* Full width */
+  height: 30%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: black;
+  /* Black w/ opacity */ }
+
+.tweet-box-wrapper {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  /* Stay in place */
+  z-index: 8;
+  /* Sit on top */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(101, 119, 134, 0.4);
+  /* Black w/ opacity */
+  /* Black w/ opacity */ }
+
+.close {
+  position: absolute;
+  right: 2rem;
+  top: 1.7rem;
+  color: #1da1f2;
+  font-size: 4rem;
+  cursor: pointer; }
+
+.big {
+  height: 280px; }
+
+.wrap-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.wrap-icon:hover {
+  background-color: rgba(29, 161, 242, 0.2);
+  /* Black w/ opacity */
+  padding: 15px;
+  border-radius: 50%; }
+
+@media only screen and (max-width: 1200px) {
+  .link,
+  .nav-btn {
+    display: none; }
+  .main-container {
+    grid-template-columns: 10% 70%; }
+  .nav-container {
+    align-items: center; }
+  .account-items .account-names,
+  .account-icon {
+    display: none; }
+  .account-items .profile-img {
+    margin: auto; } }
+
+.message-wrapper {
+  display: grid;
+  grid-template-columns: 45% 70%;
+  max-width: 990px;
+  position: relative; }
+
+.message-center {
+  background-color: black;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  border-top: none;
+  border-bottom: none; }
+
+.message-right {
+  border-right: 1px solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  position: relative; }
+
+.main-sticky {
+  width: 100%;
+  padding: 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  height: 7rem;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  position: sticky; }
+  .main-sticky .sticky-text {
+    width: 90%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d9d9d9;
+    margin: auto auto;
+    cursor: pointer; }
+  .main-sticky .sticky-icon {
+    height: auto;
+    color: #1da1f2;
+    font-size: 2rem;
+    margin: auto;
+    text-align: end;
+    width: 10%;
+    margin-right: 1rem; }
+
+.search-box-wrapper {
+  width: 100;
+  padding: 12px;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.25); }
+
+.search-box {
+  display: flex;
+  background-color: #202327;
+  color: #3f3f3f;
+  align-items: center;
+  padding: 12px;
+  border-radius: 9999px; }
+  .search-box .search-box-icon {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .search-box .search-box-icon i {
+      font-size: 2rem;
+      margin: auto;
+      align-items: center;
+      justify-content: center; }
+  .search-box .search-input {
+    padding: 12px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 2rem; }
+
+.messages-wrapper {
+  padding: 16px;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  transition: 0.2s all; }
+  .messages-wrapper .messages-profile-pic {
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem; }
+    .messages-wrapper .messages-profile-pic img {
+      border-radius: 999px; }
+  .messages-wrapper .message-profile-info {
+    display: flex; }
+  .messages-wrapper .profile-info-content {
+    display: flex;
+    align-items: center; }
+    .messages-wrapper .profile-info-content img {
+      height: 18px;
+      width: 18px;
+      margin-right: 4px; }
+    .messages-wrapper .profile-info-content span {
+      color: #d9d9d9;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-right: 4px; }
+  .messages-wrapper .profile-message span {
+    color: #6e767d;
+    font-size: 1.8rem; }
+  .messages-wrapper .message-date span {
+    color: #6e767d;
+    font-size: 1.6rem; }
+
+.messages-wrapper:hover {
+  background-color: #34383d; }
+
+#messages-wrapper {
+  padding: 0 16px;
+  height: 70px; }
+
+#messages-profile-pic {
+  width: 40px;
+  height: 40px; }
+
+#profile-info-content img {
+  height: 24px;
+  width: 24px; }
+
+#profile-info-content span {
+  font-size: 2.5rem; }
+
+.profile-properties {
+  padding-top: 2rem;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  height: 250px;
+  margin-bottom: 16px; }
+
+.private-messages-wrapper {
+  padding: 0 12px;
+  height: auto;
+  width: 100%; }
+  .private-messages-wrapper .private-message {
+    display: flex;
+    width: 100%;
+    padding-bottom: 2rem; }
+    .private-messages-wrapper .private-message .private-text {
+      padding: 12px 16px;
+      background-color: #2f3336;
+      border-radius: 15px;
+      border-bottom-left-radius: 0px;
+      color: white;
+      font-size: 1.8rem;
+      line-height: 2.5rem; }
+  .private-messages-wrapper .private-text-container {
+    max-width: 400px; }
+  .private-messages-wrapper .private-date {
+    color: #6e767d; }
+
+.private-img {
+  height: auto;
+  width: 50px;
+  position: relative;
+  margin-right: 2rem; }
+  .private-img img {
+    border-radius: 9999px;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+
+.private-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4px;
+  border-top: 1px solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  margin-top: 2rem; }
+  .private-footer .footer-wrapper {
+    padding: 4px;
+    display: flex; }
+  .private-footer .footer-icons {
+    display: flex; }
+    .private-footer .footer-icons .footer-icon {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      margin-right: 2rem; }
+    .private-footer .footer-icons .footer-icon i {
+      width: 2.2rem;
+      height: 2.2rem;
+      margin: auto;
+      font-size: 2.2rem;
+      color: #1da1f2; }
+  .private-footer .footer-textbar {
+    display: flex;
+    padding: 4px 12px;
+    position: relative;
+    background-color: #2f3336;
+    border-radius: 999px;
+    width: 100%; }
+    .private-footer .footer-textbar .footer-text {
+      padding: 4px 0;
+      width: 100%; }
+      .private-footer .footer-textbar .footer-text span {
+        color: #6e6e6e;
+        font-size: 2rem; }
+    .private-footer .footer-textbar .textbar-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .private-footer .footer-textbar .textbar-icon i {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin: auto;
+        font-size: 2.2rem;
+        color: #1da1f2; }
+  .private-footer .footer-send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    margin-left: 2rem; }
+    .private-footer .footer-send i {
+      width: 2.2rem;
+      height: 2.2rem;
+      margin: auto;
+      font-size: 2.2rem;
+      color: #1da1f2; }

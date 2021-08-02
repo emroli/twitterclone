@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/fd5747aaa5.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/dist/css/main.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Header -->
+    <header id="header">
+      <div class="nav-container">
+        <!-- LOGO -->
+        <div class="logo">
+          <a id="logo" href="#"><img src="" alt=""><i class="logo-img fab fa-twitter"></i></a>
+        </div>
+
+
+        <!-- LINKS -->
+        <div class="nav-links">
+          <!-- 1st link -->
+          <a href="#" class="links-wrapper">
+            <div class="links">
+              <div class="link-icon active"><i class="fas fa-home"></i></div>
+              <div class="link active">Home</div>
+            </div>
+          </a>
+
+
+          <!-- 2nd link -->
+          <a href="#" class="links-wrapper">
+            <div class="links">
+              <div class="link-icon"><i class="fas fa-hashtag"></i></div>
+              <div class="link">Explore</div>
+            </div>
+          </a>
+
+                    <a href="#" class="links-wrapper">
+                      <div class="links">
+                        <div class="link-icon"><i class="far fa-bell"></i></div>
+                        <div class="link">Notifications</div>
+                      </div>
+                    </a>
+
+                    <a href="#" class="links-wrapper">
+                      <div class="links">
+                        <div class="link-icon"><i class="far fa-envelope"></i></div>
+                        <div class="link">Message</div>
+                      </div>
+                    </a>
+
+                              <a href="#" class="links-wrapper">
+                                <div class="links">
+                                  <div class="link-icon"><i class="far fa-bookmark"></i></div>
+                                  <div class="link">Bookmarks</div>
+                                </div>
+                              </a>
+
+                                        <a href="#" class="links-wrapper">
+                                          <div class="links">
+                                            <div class="link-icon"><i class="far fa-list-alt"></i></div>
+                                            <div class="link">Lists</div>
+                                          </div>
+                                        </a>
+
+                                                  <a href="#" class="links-wrapper">
+                                                    <div class="links">
+                                                      <div class="link-icon"><i class="far fa-user"></i></div>
+                                                      <div class="link">Profile</div>
+                                                    </div>
+                                                  </a>
+
+                                                            <a href="#" class="links-wrapper">
+                                                              <div class="links">
+                                                                <div class="link-icon"><i class="far fa-comment-dots"></i></div>
+                                                                <div class="link">More</div>
+                                                              </div>
+                                                            </a>
+
+
+          <!-- BTN -->
+        </div>
+        <div id="tweetBtn" class="nav-btn">
+          <button id="tweetBtn" class="nav-tweet">Tweet</button>
+        </div>
+        
+      </div>
+      <div class="nav-account">
+        <div class="account-items">
+          <div class="profile-img">
+            <img src="/dist/images/profile.jpg" alt="">
+          </div>
+          <div class="account-names">
+            <p class="account-name">Angry Kippetje</p>
+            <p class="account-tag">@AngryKippetje</p>
+          </div>
+          <div class="account-icon">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main id="main">
+      <div class="main-wrapper">
+
+        <!-- sticky top bar -->
+        <div class="main-center">
+          <div class="main-sticky">
+            <div class="sticky-text">Latest Tweets</div>
+            <div class="sticky-icon"><i class="far fa-star"></i></div>
+          </div>
+          <!-- tweet box -->
+          <div class="tweet-box">
+            <div class="tweet-icon">
+              <img src="/dist/images/profile.jpg" alt="">
+            </div>
+            <div class="tweet-items">
+              <div class="tweet-msg">
+                <input id="tweetValue" type="text" name="tweet" placeholder="What's happening?">
+              </div>
+              <div class="tweet-iconset">
+                <div class="icon-set">
+                  <div class="wrap-icon">
+                    <i class="fas fa-upload"></i>
+                  </div>
+                  
+                  <i class="fas fa-photo-video"></i>
+                  <i class="fas fa-chart-bar"></i>
+                  <i class="far fa-smile"></i>
+                  <i class="fas fa-business-time"></i>
+                </div>
+                <div id="mainTweetBtn" class="main-btn">
+                  <button class="main-tweet">Tweet</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TWEET BOX MODAL -->
+          <div class="tweet-box-wrapper"></div>
+          <div id="tweetBox" class="tweet-box">
+            <div class="tweet-icon">
+              <span class="close">&times;</span>
+              <img src="/dist/images/profile.jpg" alt="">
+            </div>
+            <div class="tweet-items">
+              <div class="tweet-msg big">
+                <input type="text" placeholder="What's happening?">
+              </div>
+              <div class="tweet-iconset">
+                <div class="icon-set">
+                  
+                  <i class="fas fa-upload"></i>
+                  <i class="fas fa-photo-video"></i>
+                  <i class="fas fa-chart-bar"></i>
+                  <i class="far fa-smile"></i>
+                  <i class="fas fa-business-time"></i>
+                </div>
+                <div class="main-btn">
+                  <button class="main-tweet">Tweet</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- ENDS HERE -->
+
+          <div class="seperator"></div>
+
+          <!-- tweets -->
+
+          <div class="article-wrapper">
+            <div class="article-profile">
+              <div class="tweet-icon">
+                <img src="/dist/images/profile.jpg" alt="">
+              </div>
+              <div class="article-items">
+                <div class="article-top-bar">
+                  <div class="profile-name">KIM AMA YON</div>
+                  <div class="profile-tag">@Dunkofkim</div>
+                  <div class="time">13m</div>
+                  <div class="article-icon">
+                      <i class="fas fa-ellipsis-h"></i>
+                  </div>
+                </div>
+                <div class="article-text">
+                  <p class="article-tweet">
+                    "Bana balık tutmayı öğretme, bana balık ver üstüne de nargile getir."
+                    <br>Suriyeli atasözü
+                  </p>
+                </div>
+                <div class="article-image">
+                  <img src="/dist/images/sedat.jpg" alt="">
+                </div>
+                <div class="article-icons">
+                  <div class="below-img">
+                    <i class="far fa-comment"></i>
+                    <p></p>
+                  </div>
+
+                  <div class="below-img">
+                    <i class="fas fa-retweet"></i>
+                    <p>3</p>
+                  </div>
+                  
+                  <div class="below-img">
+                    <i class="far fa-heart"></i>
+                    <p>26</p>
+                  </div>
+                  
+                  <div class="below-img">
+                    <i class="fas fa-link"></i>
+                    <p>19</p>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              
+              
+            </div>
+           
+          </div>
+
+
+          <!-- main end here -->
+        </div>
+
+        
+
+        
+
+
+
+
+        <!--  -->
+
+        <div class="main-right">
+          <div class="right-wrapper">
+            <div class="input-container">
+              <div class="input-icon">
+              <i class="fas fa-search"></i>
+              <input type="text" id="input" value="Search on Twitter" placeholder="">
+              </div>
+            </div>
+            <div class="all-topics">
+            <div class="topic-wrapper">
+              <div class="topic-title-wrapper">
+                <div class="topic-title">
+                  <h4>Related topics</h4>
+                </div>
+                <div class="topic-icon">
+                  <i class="fas fa-cog"></i>
+                </div>
+              </div>
+                <!-- TOPICS -->
+                <div class="topics">
+                  <div class="topic-top">
+                    <span>Agenda - Politics</span>
+                    <div class="topic-top-icon">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                  </div>
+                  <div class="topic-tag">
+                    <span>#PrayForTurkey</span>
+                  </div>
+                  <div class="topic-tweet">
+                    <span>93,4 T Tweets</span>
+                  </div>
+                </div>
+
+                <div class="topics">
+                  <div class="topic-top">
+                    <span>Agenda - Politics</span>
+                    <div class="topic-top-icon">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                  </div>
+                  <div class="topic-tag">
+                    <span>#PrayForTurkey</span>
+                  </div>
+                  <div class="topic-tweet">
+                    <span>93,4 T Tweets</span>
+                  </div>
+                </div>
+
+                <!-- Topics End -->
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+</div>
+  <script src="app.js"></script>
+</body>
+</html>
