@@ -670,3 +670,6 @@ input[type="text"] {
       margin: auto;
       font-size: 2.2rem;
       color: #1da1f2; }
+  .private-footer .footer-input {
+    background-color: transparent;
+    font-size: 1.5rem; }

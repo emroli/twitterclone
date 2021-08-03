@@ -104,9 +104,6 @@ articleWrapper.appendChild(newTweet);
 tweetValue.value = '';
 }
 
-
-
-
-
 })
+
 
