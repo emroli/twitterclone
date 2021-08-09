@@ -113,8 +113,11 @@
         <!-- sticky top bar -->
         <div class="main-center">
           <div class="main-sticky">
-            <div class="sticky-text">Latest Tweets</div>
-            <div class="sticky-icon"><i class="far fa-star"></i></div>
+            <div class="sticky-text">Home</div>
+            <div class="sticky-icon">
+              
+                <div id="wrap-icon" class="wrap-icon"><i  class="far fa-star"></i></div>
+              </i></div>
           </div>
           <!-- tweet box -->
           <div class="tweet-box">
@@ -128,13 +131,16 @@
               <div class="tweet-iconset">
                 <div class="icon-set">
                   <div class="wrap-icon">
-                    <i class="fas fa-upload"></i>
+                    <i type="file" class="fas fa-upload"></i>
                   </div>
+                  <div class="wrap-icon"><i class="fas fa-photo-video"></i></div>
                   
-                  <i class="fas fa-photo-video"></i>
-                  <i class="fas fa-chart-bar"></i>
-                  <i class="far fa-smile"></i>
-                  <i class="fas fa-business-time"></i>
+                  <div class="wrap-icon"><i class="fas fa-chart-bar"></i></div>
+                  
+                  <div class="wrap-icon"><i class="far fa-smile"></i></div>
+                  
+                  <div class="wrap-icon"><i class="fas fa-business-time"></i></div>
+                  
                 </div>
                 <div id="mainTweetBtn" class="main-btn">
                   <button class="main-tweet">Tweet</button>
@@ -152,7 +158,7 @@
             </div>
             <div class="tweet-items">
               <div class="tweet-msg big">
-                <input type="text" placeholder="What's happening?">
+                <input id="tweetValueLeft" type="text" placeholder="What's happening?">
               </div>
               <div class="tweet-iconset">
                 <div class="icon-set">
@@ -164,7 +170,7 @@
                   <i class="fas fa-business-time"></i>
                 </div>
                 <div class="main-btn">
-                  <button class="main-tweet">Tweet</button>
+                  <button onclick="sendTweet()" class="main-tweet">Tweet</button>
                 </div>
               </div>
             </div>
@@ -208,17 +214,17 @@
 
                   <div class="below-img">
                     <i class="fas fa-retweet"></i>
-                    <p>3</p>
+                    <span id="cocuk"> 3 </span> 
                   </div>
                   
                   <div class="below-img">
                     <i class="far fa-heart"></i>
-                    <p>26</p>
+                    <span id="cocuk"> 26 </span>
                   </div>
                   
                   <div class="below-img">
                     <i class="fas fa-link"></i>
-                    <p>19</p>
+                    <span id="cocuk"> 19 </span>
                   </div>
                   
                   
@@ -258,7 +264,10 @@
                   <h4>Related topics</h4>
                 </div>
                 <div class="topic-icon">
-                  <i class="fas fa-cog"></i>
+                  <div class="wrap-icon">
+                    <i class="fas fa-cog"></i>
+                  </div>
+                  
                 </div>
               </div>
                 <!-- TOPICS -->

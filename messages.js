@@ -18,8 +18,21 @@ const input = document.querySelector('.footer-input');
 const btn = document.querySelector('.footer-send');
 const wrapper = document.querySelector('.private-messages-wrapper');
 
+
+// Date template for messages
+let currentdate = new Date();
+currentdate.getDate()
+
+let now = currentdate.getDate() + ' ' + currentdate.getMonth(+1) + ' ' + currentdate.getFullYear().toString().substr(-2) + ' ' + currentdate.getHours() +":"+ currentdate.getMinutes();
+console.log(now);
+
+
+// new message after click send button.
 btn.addEventListener('click', () => {
-  const newMessage = document.createElement('div');
+  if(input.value === ''){
+    input.value = ''
+  } else {
+     const newMessage = document.createElement('div');
   
   newMessage.innerHTML = `
   <div class="private-message">
@@ -32,7 +45,7 @@ btn.addEventListener('click', () => {
                 </span>
                 </div>
                 <div class="private-date">
-                  <span>7 Haz 2020 ÖS 11:10</span>
+                  <span>${now}</span>
                 </div>
               </div>
             </div>
@@ -40,4 +53,8 @@ btn.addEventListener('click', () => {
 
   wrapper.appendChild(newMessage);
   input.value = '';
+  }
 })
+
+
+

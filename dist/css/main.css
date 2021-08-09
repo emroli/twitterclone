@@ -5,7 +5,8 @@
 
 html {
   font-size: 62.5%;
-  background-color: black; }
+  background-color: black;
+  width: 100%; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -14,7 +15,7 @@ body {
   min-height: 100vh; }
 
 img {
-  max-width: 100%; }
+  width: 100%; }
 
 a {
   text-decoration: none; }
@@ -49,7 +50,8 @@ header {
   display: flex;
   flex-direction: column;
   background-color: black;
-  padding: 0px 12px; }
+  padding: 0px 12px;
+  position: sticky; }
   .nav-container .logo {
     height: 70px;
     font-size: 4rem;
@@ -206,7 +208,7 @@ header {
       font-weight: 700;
       font-size: 1.7rem;
       display: flex;
-      padding: 1.5rem 5rem;
+      padding: 1.5rem 3rem;
       border-radius: 50px;
       background-color: #1da1f2; }
   .main-center .seperator {
@@ -275,7 +277,7 @@ header {
       margin: auto; }
     .main-center .article-icons .below-img {
       display: flex; }
-      .main-center .article-icons .below-img p {
+      .main-center .article-icons .below-img span {
         padding: 0 1rem; }
 
 .main-right {
@@ -420,27 +422,14 @@ input[type="text"] {
   height: 38px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  font-size: 2rem; }
 
 .wrap-icon:hover {
   background-color: rgba(29, 161, 242, 0.2);
   /* Black w/ opacity */
   padding: 15px;
   border-radius: 50%; }
-
-@media only screen and (max-width: 1200px) {
-  .link,
-  .nav-btn {
-    display: none; }
-  .main-container {
-    grid-template-columns: 10% 70%; }
-  .nav-container {
-    align-items: center; }
-  .account-items .account-names,
-  .account-icon {
-    display: none; }
-  .account-items .profile-img {
-    margin: auto; } }
 
 .message-wrapper {
   display: grid;
@@ -487,6 +476,9 @@ input[type="text"] {
     text-align: end;
     width: 10%;
     margin-right: 1rem; }
+
+#wrap-icon {
+  margin-left: auto; }
 
 .search-box-wrapper {
   width: 100;
@@ -663,7 +655,8 @@ input[type="text"] {
     align-items: center;
     width: 38px;
     height: 38px;
-    margin-left: 2rem; }
+    margin-left: 2rem;
+    cursor: pointer; }
     .private-footer .footer-send i {
       width: 2.2rem;
       height: 2.2rem;
@@ -673,3 +666,41 @@ input[type="text"] {
   .private-footer .footer-input {
     background-color: transparent;
     font-size: 1.5rem; }
+
+@media only screen and (max-width: 1200px) {
+  .link,
+  .nav-btn {
+    display: none; }
+  .main-container {
+    grid-template-columns: 10% 70%; }
+  .nav-container {
+    align-items: center; }
+  .account-items .account-names,
+  .account-icon {
+    display: none; }
+  .account-items .profile-img {
+    margin: auto; } }
+
+@media only screen and (max-width: 999px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 10% 80%; }
+  .main-wrapper {
+    grid-template-columns: 100%;
+    max-width: initial;
+    width: 100%; }
+  .main-right {
+    display: none; }
+  .main-center {
+    width: 100%; } }
+
+@media only screen and (max-width: 700px) {
+  .main-right {
+    display: none; }
+  header {
+    display: none; }
+  .main-container {
+    display: grid;
+    grid-template-columns: 100%; }
+    .main-container .tweet-box {
+      display: none; } }
