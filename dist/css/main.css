@@ -50,8 +50,7 @@ header {
   display: flex;
   flex-direction: column;
   background-color: black;
-  padding: 0px 12px;
-  position: sticky; }
+  padding: 0px 12px; }
   .nav-container .logo {
     height: 70px;
     font-size: 4rem;
@@ -100,7 +99,8 @@ header {
 .nav-account {
   width: 100%;
   max-width: 325px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: auto; }
   .nav-account .account-items {
     display: flex;
     padding: 12px; }
@@ -234,7 +234,9 @@ header {
       border-radius: 999px; }
   .main-center .article-profile {
     display: flex;
-    padding-top: 1rem; }
+    padding-top: 2rem;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.25); }
   .main-center .article-top-bar {
     display: flex;
     width: 100%;
@@ -257,7 +259,8 @@ header {
   .main-center .article-tweet {
     color: #d9d9d9;
     margin-bottom: 1.5rem;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    width: 100%; }
   .main-center .article-image {
     max-height: 300px;
     overflow: hidden;
@@ -271,7 +274,8 @@ header {
     justify-content: space-between;
     margin-top: 12px;
     color: white;
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+    margin-bottom: 12px; }
     .main-center .article-icons i {
       color: #aab8c2;
       margin: auto; }
@@ -370,12 +374,10 @@ input[type="text"] {
   /* Stay in place */
   z-index: 10;
   /* Sit on top */
-  left: 45%;
+  left: 50%;
   top: 30%;
   transform: translate(-50%, -50%);
-  width: 30%;
-  /* Full width */
-  height: 30%;
+  height: auto;
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */

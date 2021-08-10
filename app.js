@@ -31,7 +31,12 @@ tweetBox.classList.remove('modal');
 })
 
 
+// fade in function for new tweets
 
+function fadeIn(el, time) {
+  el.style.opacity = 0
+  setTimeout(() => (el.style.opacity = 1), time);
+}
 
 
 
@@ -42,6 +47,8 @@ const articleWrapper = document.querySelector('.article-wrapper');
 const btn = document.querySelector('.main-tweet');
   const newTweet = document.createElement('div');
   newTweet.classList.add('.article-profile');
+  newTweet.style.transition = "1s";
+  
   
 newTweet.innerHTML = `
 <div class="article-profile">
@@ -89,12 +96,14 @@ newTweet.innerHTML = `
                   
                 </div>
 `
-articleWrapper.appendChild(newTweet);
+articleWrapper.prepend(newTweet);
 
 tweetValue.value = '';
 wrapper.style.display = "none";
  tweetBox.style.display = "none";
 tweetBox.classList.remove('modal');
+
+fadeIn(newTweet,0)
 
 }
 
@@ -110,6 +119,8 @@ const articleWrapper = document.querySelector('.article-wrapper');
 const btn = document.querySelector('.main-tweet');
 const tweetValue = document.getElementById('tweetValue');
 
+
+
 btn.addEventListener('click', () =>{
 if (tweetValue.value === ""){
   btn.setAttribute("disabled", "");
@@ -117,6 +128,9 @@ if (tweetValue.value === ""){
   btn.removeAttribute("disabled", "");
   console.log('yoyo');
   const newTweet = document.createElement('div');
+  newTweet.classList.add('.article-profile');
+  newTweet.style.transition = "1s";
+  
 newTweet.innerHTML = `
 <div class="article-profile">
               <div class="tweet-icon">
@@ -136,9 +150,7 @@ newTweet.innerHTML = `
                    ${tweetValue.value}
                   </p>
                 </div>
-                <div class="article-image">
-                  <img src="/dist/images/sedat.jpg" alt="">
-                </div>
+              
                 <div class="article-icons">
                   <div class="below-img">
                     <i class="far fa-comment"></i>
@@ -163,8 +175,9 @@ newTweet.innerHTML = `
                   
                 </div>
 `
-articleWrapper.appendChild(newTweet);
+articleWrapper.prepend(newTweet);
 tweetValue.value = '';
+fadeIn(newTweet,0);
 }
 
 })
@@ -178,6 +191,14 @@ currentdate.getDate()
 
 let now = currentdate.getDate() + ' ' + currentdate.getMonth(+1) + ' ' + currentdate.getFullYear().toString().substr(-2) + ' ' + currentdate.getHours() +":"+ currentdate.getMinutes();
 let tweetMin = currentdate.getMinutes();
+
+
+// increase new tweet date by one each minute
+
+
+
+
+
 
 
 
