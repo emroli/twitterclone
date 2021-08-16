@@ -858,6 +858,9 @@ input[type="text"] {
   .nav-btn {
     display: none;
   }
+  .link-icon {
+    margin: auto;
+  }
 
   .main-container {
     grid-template-columns: 10% 70%;
@@ -891,6 +894,12 @@ input[type="text"] {
   }
   .main-center {
     width: 100%;
+  }
+  .link-icon {
+    margin: auto;
+  }
+  .active {
+    margin: auto;
   }
 }
 

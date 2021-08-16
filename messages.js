@@ -10,12 +10,12 @@
 // };
 
 
-// xhr.open('get', 'index.html');
+// xhr.open('get', 'try.html');
 // xhr.send();
 
 
 const input = document.querySelector('.footer-input');
-const btn = document.querySelector('.footer-send');
+const btns = document.querySelector('.footer-send');
 const wrapper = document.querySelector('.private-messages-wrapper');
 
 
@@ -28,7 +28,7 @@ console.log(now);
 
 
 // new message after click send button.
-btn.addEventListener('click', () => {
+btns.addEventListener('click', () => {
   if(input.value === ''){
     input.value = ''
   } else {
@@ -55,6 +55,15 @@ btn.addEventListener('click', () => {
   input.value = '';
   }
 })
+
+
+
+$(".logo").click(function(){
+$('main').load( "content.html");
+})
+
+
+
 
 
 

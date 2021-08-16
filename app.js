@@ -5,6 +5,8 @@
 
 
 
+
+
 closeBtn = document.querySelector('.close');
 tweetBtn = document.querySelector('#tweetBtn');
 wrapper = document.querySelector('.tweet-box-wrapper');
@@ -12,22 +14,29 @@ tweetBox = document.querySelector('#tweetBox');
 modal = document.querySelector('.modal');
 
 
-
-
-  tweetBtn.addEventListener('click', () =>{
-  wrapper.style.display = "block";
-  tweetBox.style.display = "flex";
-  tweetBox.classList.add('modal');
+tweetBtn.addEventListener('click', () =>{
+  openModal();
 })
 
 
+wrapper.addEventListener('click', () =>{
+  closeModal();
+}) 
 
+function openModal() {
+   wrapper.style.display = "block";
+  tweetBox.style.display = "flex";
+  tweetBox.classList.add('modal');
+}
 
-
-closeBtn.addEventListener('click', () => {
-wrapper.style.display = "none";
+function closeModal(){
+  wrapper.style.display = "none";
  tweetBox.style.display = "none";
 tweetBox.classList.remove('modal');
+}
+
+closeBtn.addEventListener('click', () => {
+closeModal();
 })
 
 
@@ -99,9 +108,7 @@ newTweet.innerHTML = `
 articleWrapper.prepend(newTweet);
 
 tweetValue.value = '';
-wrapper.style.display = "none";
- tweetBox.style.display = "none";
-tweetBox.classList.remove('modal');
+closeModal();
 
 fadeIn(newTweet,0)
 
@@ -185,12 +192,62 @@ fadeIn(newTweet,0);
 
 
 
-// DATE
-let currentdate = new Date();
-currentdate.getDate()
 
-let now = currentdate.getDate() + ' ' + currentdate.getMonth(+1) + ' ' + currentdate.getFullYear().toString().substr(-2) + ' ' + currentdate.getHours() +":"+ currentdate.getMinutes();
-let tweetMin = currentdate.getMinutes();
+// new message after click send button.
+
+// function sendMessage() {
+
+
+// const input = document.querySelector('.footer-input');
+// const btns = document.querySelector('.footer-send');
+// const wrapper = document.querySelector('.private-messages-wrapper');
+
+// // Date template for messages
+// let currentdate = new Date();
+// currentdate.getDate()
+
+// let now = currentdate.getDate() + ' ' + currentdate.getMonth(+1) + ' ' + currentdate.getFullYear().toString().substr(-2) + ' ' + currentdate.getHours() +":"+ currentdate.getMinutes();
+// console.log(now);
+
+// btns.addEventListener('click', () => {
+//   if(input.value === ''){
+//     input.value = ''
+//   } else {
+//      const newMessage = document.createElement('div');
+  
+//   newMessage.innerHTML = `
+//   <div class="private-message">
+//               <div class="private-img">
+//                 <img src="/dist/images/profile.jpg" alt="">
+//               </div>
+//               <div class="private-text-container">
+//                 <div class="private-text">
+//                 <span>${input.value}
+//                 </span>
+//                 </div>
+//                 <div class="private-date">
+//                   <span>${now}</span>
+//                 </div>
+//               </div>
+//             </div>
+//   `
+
+//   wrapper.appendChild(newMessage);
+//   input.value = '';
+//   }
+// })
+
+// }
+
+
+
+
+// DATE
+// let currentdate = new Date();
+// currentdate.getDate()
+
+// let now = currentdate.getDate() + ' ' + currentdate.getMonth(+1) + ' ' + currentdate.getFullYear().toString().substr(-2) + ' ' + currentdate.getHours() +":"+ currentdate.getMinutes();
+// let tweetMin = currentdate.getMinutes();
 
 
 // increase new tweet date by one each minute
@@ -225,3 +282,12 @@ let tweetMin = currentdate.getMinutes();
     
 //   })
 // })
+
+
+
+
+
+// AJAX TRY
+
+
+
